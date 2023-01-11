@@ -7,11 +7,11 @@ class CustomIconCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(left: 16.0, right: 16.0, top: 28, bottom: 28,),
+      padding: const EdgeInsets.only(left: 12.0, right: 12.0, top: 28, bottom: 28,),
       child: Card(
         elevation: 8,
         child: Padding(
-          padding: const EdgeInsets.all(18.0),
+          padding: const EdgeInsets.all(16.0),
           child: Column(
             children: [
               Icon(iconData, color: Colors.indigo, size: 50),
