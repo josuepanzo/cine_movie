@@ -1,10 +1,15 @@
 import 'package:flutter/material.dart';
+import '../controller/controller_movie.dart';
 
+// ignore: must_be_immutable
 class BestMovieOfWeak extends StatelessWidget {
-  const BestMovieOfWeak({Key? key}) : super(key: key);
+  final int index;
+  // ignore: prefer_const_constructors_in_immutables
+  BestMovieOfWeak(this.index, {Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    MovieController crtlMovie = MovieController();
     return Padding(
       padding: const EdgeInsets.all(12.0),
       child: Column(
@@ -17,17 +22,17 @@ class BestMovieOfWeak extends StatelessWidget {
               decoration: BoxDecoration(
                 color: Colors.red,
                 borderRadius: BorderRadius.circular(10),
-                image: const DecorationImage(
-                  image: AssetImage("assets/image/assassin.png"),
+                image: DecorationImage(
+                  image: AssetImage(crtlMovie.bestMovieOfWeakList[index].image),
                   fit: BoxFit.cover,
                 ),
               ),
             ),
           ),
           const SizedBox(height: 10),
-          const Text(
-            "The Assassin Cread",
-            style: TextStyle(
+          Text(
+            crtlMovie.bestMovieOfWeakList[index].title,
+            style: const TextStyle(
               color: Colors.black,
               fontWeight: FontWeight.w600,
             ),
