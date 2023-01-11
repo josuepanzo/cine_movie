@@ -1,10 +1,15 @@
 import 'package:flutter/material.dart';
 
+import '../controller/controller_movie.dart';
+
 class TopRatedMovie extends StatelessWidget {
-  const TopRatedMovie({Key? key}) : super(key: key);
+  final int index;
+  // ignore: use_key_in_widget_constructors
+  const TopRatedMovie(this.index);
 
   @override
   Widget build(BuildContext context) {
+    MovieController crtlMovie = MovieController();
     return Padding(
       padding: const EdgeInsets.all(12.0),
       child: Column(
@@ -17,17 +22,17 @@ class TopRatedMovie extends StatelessWidget {
               decoration: BoxDecoration(
                 color: Colors.red,
                 borderRadius: BorderRadius.circular(10),
-                image: const DecorationImage(
-                  image: AssetImage("assets/image/assassin.png"),
+                image: DecorationImage(
+                  image: AssetImage(crtlMovie.topRatedMovieList[index].image),
                   fit: BoxFit.cover,
                 ),
               ),
             ),
           ),
           const SizedBox(height: 10),
-          const Text(
-            "The Assassin Cread",
-            style: TextStyle(
+          Text(
+            crtlMovie.topRatedMovieList[index].title,
+            style: const TextStyle(
               color: Colors.black,
               fontWeight: FontWeight.w600,
             ),
