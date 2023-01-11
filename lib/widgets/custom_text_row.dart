@@ -15,14 +15,14 @@ class CustomTextRow extends StatelessWidget {
           Text(
             label,
             style: const TextStyle(
-              color: Colors.black,
+              color: Colors.white,
               fontSize: 16,
-              fontWeight: FontWeight.w400,
+              fontWeight: FontWeight.w500,
             ),
           ),
           TextButton(
             onPressed: onPressed,
-            child: const Text("View All"),
+            child: const Text("View All", style: TextStyle(color: Colors.white70,),),
           ),
         ],
       ),

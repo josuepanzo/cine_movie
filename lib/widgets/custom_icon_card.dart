@@ -10,16 +10,17 @@ class CustomIconCard extends StatelessWidget {
       padding: const EdgeInsets.only(left: 12.0, right: 12.0, top: 28, bottom: 28,),
       child: Card(
         elevation: 8,
+        color: const Color(0xFF555774),
         child: Padding(
           padding: const EdgeInsets.all(16.0),
           child: Column(
             children: [
-              Icon(iconData, color: Colors.indigo, size: 50),
+              Icon(iconData, color: Colors.white54, size: 50),
               const SizedBox(height: 18),
               Text(
                 label,
                 style: const TextStyle(
-                  color: Colors.black,
+                  color: Colors.white70,
                 ),
               ),
             ],

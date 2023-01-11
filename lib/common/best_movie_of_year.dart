@@ -13,6 +13,7 @@ class BestMovieOfYear extends StatelessWidget {
       children: [
         Card(
           elevation: 8.0,
+          color: const Color(0xFF555774),
           child: Row(
             children: [
               Container(
@@ -41,12 +42,14 @@ class BestMovieOfYear extends StatelessWidget {
                         style: const TextStyle(
                           fontSize: 17,
                           fontWeight: FontWeight.bold,
+                          color: Colors.white70,
                         )),
                     const SizedBox(height: 10),
                     SizedBox(
                       width: 210,
                       child: Text(
                         crtlMovie.bestMovieOfYearList[index].description,
+                        style: const TextStyle(color: Colors.white60, fontSize: 15),
                       ),
                     ),
                   ],

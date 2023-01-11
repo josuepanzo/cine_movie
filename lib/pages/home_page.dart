@@ -4,6 +4,7 @@ import '../widgets/custom_text_row.dart';
 import '../common/best_movie_of_year.dart';
 import '../common/best_movie_of_weak.dart';
 import '../controller/controller_movie.dart';
+import '../widgets/custom_textformfield.dart';
 import 'details_page.dart';
 
 class HomePage extends StatelessWidget {
@@ -17,10 +18,13 @@ class HomePage extends StatelessWidget {
         title: const Text("CineMovie", style: TextStyle(color: Colors.white)),
         centerTitle: true,
         elevation: 10,
+        backgroundColor: const Color(0xFF1D1D27),
       ),
+      backgroundColor: const Color(0xFF353846),
       body: SingleChildScrollView(
         child: Column(
           children: [
+            const CustomTextFormField(),
             CustomTextRow(label: "Movie of the week", onPressed: () {}),
             SizedBox(
               width: MediaQuery.of(context).size.width,
@@ -38,6 +42,7 @@ class HomePage extends StatelessWidget {
                   ),
             ),
             ),
+            const SizedBox(height: 12),
             CustomTextRow(label: "Best Movie of 2023", onPressed: () {}),
             Container(
               width: MediaQuery.of(context).size.width,
@@ -56,6 +61,7 @@ class HomePage extends StatelessWidget {
                   ),
               ),
             ),
+            const SizedBox(height: 12),
             CustomTextRow(label: "Top Rated Movie", onPressed: () {}),
             Container(
               height: 260,
@@ -72,6 +78,7 @@ class HomePage extends StatelessWidget {
                   ),
               ),
             ),
+            const SizedBox(height: 12),
           ],
         ),
       ),

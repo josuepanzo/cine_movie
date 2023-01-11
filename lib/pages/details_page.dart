@@ -13,9 +13,10 @@ class DetailsPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         elevation: 0,
-        iconTheme: const IconThemeData(color: Colors.black),
-        backgroundColor: Colors.white,
+        iconTheme: const IconThemeData(color: Colors.white),
+        backgroundColor: const Color(0xFF353846),
       ),
+      backgroundColor: const Color(0xFF353846),
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -43,7 +44,7 @@ class DetailsPage extends StatelessWidget {
               child: Text(
                 movie.title,
                 style: const TextStyle(
-                  color: Colors.black,
+                  color: Colors.white70,
                   fontSize: 28,
                   letterSpacing: 1,
                   fontWeight: FontWeight.w600,
@@ -78,11 +79,11 @@ class DetailsPage extends StatelessWidget {
               padding: const EdgeInsets.symmetric(horizontal: 10.0),
               child: Text(
                 movie.description,
-                style: const TextStyle(height: 1.2, letterSpacing: .8, fontSize: 16),
+                style: const TextStyle(height: 1.2, letterSpacing: .8, fontSize: 16, color: Colors.white60,),
                 textAlign: TextAlign.center,
               ),
             ),
-            const SizedBox(height: 15),
+            const SizedBox(height: 18),
           ],
         ),
       ),

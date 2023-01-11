@@ -20,7 +20,6 @@ class BestMovieOfWeak extends StatelessWidget {
               width: 150,
               height: 200,
               decoration: BoxDecoration(
-                color: Colors.red,
                 borderRadius: BorderRadius.circular(10),
                 image: DecorationImage(
                   image: AssetImage(crtlMovie.bestMovieOfWeakList[index].image),
@@ -33,7 +32,7 @@ class BestMovieOfWeak extends StatelessWidget {
           Text(
             crtlMovie.bestMovieOfWeakList[index].title,
             style: const TextStyle(
-              color: Colors.black,
+              color: Colors.white70,
               fontWeight: FontWeight.w600,
             ),
           ),
